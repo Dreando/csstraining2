@@ -35,9 +35,9 @@
 .detail {
   display: flex;
   padding: 4rem;
+  font-size: 1.3rem;
 
   .description {
-    font-size: 1.4rem;
     flex: 0 0 60%;
     margin-right: 4rem;
     background-color: white;
@@ -48,9 +48,6 @@
 
   .user-reviews {
     flex: 1;
-    background-color: white;
     border-bottom: 1px solid var(--color-grey-light-1);
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .1);
-    padding: 3rem;
   }
 }

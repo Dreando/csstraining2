@@ -270,8 +270,17 @@
   background-color: transparent;
   transition: all .3s;
 
+  & span {
+    margin-left: 3px;
+    transition: all .3s;
+  }
+
   &:hover {
     color: var(--color-grey-dark-1);
+
+    & span {
+      margin-left: 7px;
+    }
   }
 }
 
@@ -328,6 +337,7 @@
     height: 4rem;
     border-radius: 50%;
     box-sizing: content-box;
+
     &:not(last-child) {
       margin-right: -2rem;
       border: 3px solid white;
@@ -340,5 +350,133 @@
 
   &__friends {
     margin-right: 2rem;
+  }
+}
+
+/* Review */
+
+.review {
+  background-color: white;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, .1);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &__text {
+    z-index: 10;
+    position: relative;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  &__user-box {
+    margin-right: auto;
+  }
+
+  &__username {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  &__user-date {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  &__rating {
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: 300;
+  }
+
+  &__see-all {
+    text-align: center;
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    line-height: 1;
+    z-index: 1;
+  }
+}
+
+/* Call to actions */
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+}
+
+.btn {
+  position: relative;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  overflow: hidden;
+  transition: all .2s;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__visible {
+    padding: 2.5rem 6rem;
+    transition: all .2s;
+  }
+
+  &__invisible {
+    padding: 2.5rem 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: all .2s;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+  }
+
+  &:active {
+    transform: translateY(3px);
   }
 }
